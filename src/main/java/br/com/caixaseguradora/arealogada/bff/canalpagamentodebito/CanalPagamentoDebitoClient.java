@@ -8,6 +8,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
 
 @Component
 public class CanalPagamentoDebitoClient extends NetworkClient {
@@ -24,7 +25,7 @@ public class CanalPagamentoDebitoClient extends NetworkClient {
         headers.set("Content-Type", "application/json; charset=utf-8");
         final HttpEntity<String> entity = new HttpEntity<String>(headers);
 
-        ResponseEntity<ListaCanalPagamentoDebito> response = restTemplate.exchange(
+        ResponseEntity<ListaCanalPagamentoDebito> response = new RestTemplate().exchange(
                 urlFor(certificado, cpf, codigoEmpresa), HttpMethod.GET, entity, ListaCanalPagamentoDebito.class
         );
 

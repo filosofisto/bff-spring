@@ -3,7 +3,7 @@ type Query {
 #    getContratoPessoa(cpf: String, token: String): [Contrato!]!
 
     # CanalPagamentoDebito
-    getListaCanalPagamentoDebito(certificado: String, cpf: String, codigoEmpresa: String, token: String): [CanalPagamentoDebito!]!
+    getListaCanalPagamentoDebito(certificado: String, cpf: String, codigoEmpresa: String): [CanalPagamentoDebito!]!
 
     # Resources by screen
     #findByScreen(screen: String): [Resource!]!
@@ -65,7 +65,7 @@ type Query {
 #    saldoBruto: Float
 #    numProposta: String
 #}
-#
+
 #type Pessoa {
 #    #_id: ID
 #    id: String
