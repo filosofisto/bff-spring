@@ -1,0 +1,12 @@
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+
+security:
+  clientId: 8b760cf4-f6ec-4240-8c2d-f763ee98ba9f
+
+url:
+  getContratoPessoa: https://api-hm.caixaseguradora.com.br/caixaseguradora/hom/rs/corporativo/arealogada/v1/getContratoPessoa
+  getListaCanalPagamentoDebito: https://api-hm.caixaseguradora.com.br/caixaseguradora/hom/rs/v1.0/previdencia/canais_pagamento
