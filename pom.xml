@@ -41,5 +41,13 @@
             <artifactId>graphql-java-servlet</artifactId>
             <version>LATEST</version>
         </dependency>
+
+        <!-- to embed GraphiQL tool -->
+        <dependency>
+            <groupId>com.graphql-java-kickstart</groupId>
+            <artifactId>graphiql-spring-boot-starter</artifactId>
+            <version>6.0.0</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 </project>

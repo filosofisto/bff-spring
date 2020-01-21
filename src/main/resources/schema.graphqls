@@ -1,15 +1,30 @@
 type Query {
-    # GetContratoPessoa
     getContratoPessoa(cpf: String): [Contrato!]!
 
-    # CanalPagamentoDebito
     getListaCanalPagamentoDebito(certificado: String, cpf: String, codigoEmpresa: String): [CanalPagamentoDebito!]!
+}
 
-    # Resources by screen
-    #findByScreen(screen: String): [Resource!]!
+type Mutation {
+    creditoEmConta(input: CreditoEmContaInput!): CreditoEmContaOutput!
+}
 
-    # Sample
-    #bookById(id: ID): Book
+input CreditoEmContaInput {
+    certificado: String!
+    codigo_empresa: String!
+    data_pagamento: String!
+    metodo_pagamento: String!
+    codigo_tipo_pagamento: String!
+    codigo_canal_recuperacao: Int!
+    descricao_pagamento: String!
+    valor_contribuicao: Float!
+    indicativo_imprimir_fatura: Boolean!
+    tipo_conta: String!
+    numero_banco: String!
+    nome_banco: String!
+    numero_agencia: String!
+    numero_digito_agencia: String
+    numero_conta: String!
+    numero_digito_conta: String!
 }
 
 # GetContratoPessoa
@@ -88,20 +103,26 @@ type Pessoa {
 }
 
 type CanalPagamentoDebito {
-    codigo_tipo_pagamento: String,
-    descricao_pagamento: String,
-    codigo_canal_arrecadacao: Int,
-    metodo_pagamento: String,
-    tipo_conta_bancaria: String,
-    numero_banco: String,
-    nome_banco: String,
-    numero_agencia: String,
-    digito_agencia: String,
-    numero_conta: String,
-    digito_conta: String,
-    indicador_obrigatorio_agencia: Boolean,
-    indicador_obrigatorio_conta: Boolean,
+    codigo_tipo_pagamento: String
+    descricao_pagamento: String
+    codigo_canal_arrecadacao: Int
+    metodo_pagamento: String
+    tipo_conta_bancaria: String
+    numero_banco: String
+    nome_banco: String
+    numero_agencia: String
+    digito_agencia: String
+    numero_conta: String
+    digito_conta: String
+    indicador_obrigatorio_agencia: Boolean
+    indicador_obrigatorio_conta: Boolean
     indicador_pagamento_inicial: Boolean
+}
+
+type CreditoEmContaOutput {
+    numFatura: String
+    status: String
+    lstMensagem: [String!]!
 }
 
 # CMS

@@ -4,9 +4,40 @@ graphql:
     enabled: true
     corsEnabled: true
 
+graphiql:
+  enabled: true
+  cdn:
+    enabled: false
+
+#graphiql:
+#  mapping: /graphiql
+#  endpoint:
+#    graphql: /graphql
+#    subscriptions: /subscriptions
+#  subscriptions:
+#    timeout: 30
+#    reconnect: false
+#  static:
+#    basePath: /
+#  enabled: true
+##  pageTitle: GraphiQL
+#  cdn:
+#    enabled: false
+#    version: 0.13.0
+##  props:
+##    resources:
+##      query: schema.graphql
+##      defaultQuery: defaultQuery.graphql
+##      variables: variables.graphql
+#    variables:
+#      editorTheme: "solarized light"
+##  headers:
+##    Authorization: "Bearer <your-token>"
+
 security:
   clientId: 8b760cf4-f6ec-4240-8c2d-f763ee98ba9f
 
 url:
   getContratoPessoa: https://api-hm.caixaseguradora.com.br/caixaseguradora/hom/rs/corporativo/arealogada/v1/getContratoPessoa
   getListaCanalPagamentoDebito: https://api-hm.caixaseguradora.com.br/caixaseguradora/hom/rs/v1.0/previdencia/canais_pagamento
+  creditoEmConta: https://api-hm.caixaseguradora.com.br/caixaseguradora/hom/rs/v2.0/previdencia/aporte/download/
