@@ -1,6 +1,6 @@
 type Query {
     # GetContratoPessoa
-#    getContratoPessoa(cpf: String, token: String): [Contrato!]!
+    getContratoPessoa(cpf: String): [Contrato!]!
 
     # CanalPagamentoDebito
     getListaCanalPagamentoDebito(certificado: String, cpf: String, codigoEmpresa: String): [CanalPagamentoDebito!]!
@@ -13,79 +13,79 @@ type Query {
 }
 
 # GetContratoPessoa
-#type Contrato {
-#    #_id: ID
-#    id: String
-#    desSegmento: String
-#    numContrato: String
-#    sistema: String
-#    codCategoriaProduto: String
-#    codProduto: String
-#    codProdutoBu: String
-#    nomeProduto: String
-#    nomeProdutoBu: String
-#    indContrato: String
-#    situacaoContrato: String
-#    dataHoraIniVigencia: String
-#    desDiretoria: String
-#    nomeTitularCartao: String
-#    nomeTitularCobranca: String
-#    dataHoraInicioVigenciaFormatted: String
-#    dataHoraFimVigencia: String
-#    desModalidadeComtemplacao: String
-#    dataHoraFimVigenciaFormatted: String
-#    numApolice: String
-#    endereco: String
-#    coberturasContratadas: [String]
-#    numCertificado: String
-#    nomePessoa: String
-#    saldo: String
-#    numTitulo: String
-#    numDVCap: String
-#    numPlano: String
-#    numSerie: String
-#    numModPlano: String
-#    codGrupo: String
-#    codCota: String
-#    valorBem: String
-#    valorBemContemplacao: String
-#    opcaoPagamento: String
-#    formaPagamento: String
-#    numParcContratadas: String
-#    valorImportanciaSegurada: String
-#    dataUltimoSorteio: String
-#    dataAssembleia: String
-#    tipoContrato: String
-#    pessoasVinculadas: [Pessoa!]!
-#    itemSegurado: String
-#    numVersao: String
-#    numSorteCap: String
-#    saldoProvisao: Float
-#    saldoLiquido: Float
-#    saldoBruto: Float
-#    numProposta: String
-#}
+type Contrato {
+    #_id: ID
+    id: String
+    desSegmento: String
+    numContrato: String
+    sistema: String
+    codCategoriaProduto: String
+    codProduto: String
+    codProdutoBu: String
+    nomeProduto: String
+    nomeProdutoBu: String
+    indContrato: String
+    situacaoContrato: String
+    dataHoraIniVigencia: String
+    desDiretoria: String
+    nomeTitularCartao: String
+    nomeTitularCobranca: String
+    dataHoraInicioVigenciaFormatted: String
+    dataHoraFimVigencia: String
+    desModalidadeComtemplacao: String
+    dataHoraFimVigenciaFormatted: String
+    numApolice: String
+    endereco: String
+    coberturasContratadas: [String]
+    numCertificado: String
+    nomePessoa: String
+    saldo: String
+    numTitulo: String
+    numDVCap: String
+    numPlano: String
+    numSerie: String
+    numModPlano: String
+    codGrupo: String
+    codCota: String
+    valorBem: String
+    valorBemContemplacao: String
+    opcaoPagamento: String
+    formaPagamento: String
+    numParcContratadas: String
+    valorImportanciaSegurada: String
+    dataUltimoSorteio: String
+    dataAssembleia: String
+    tipoContrato: String
+    pessoasVinculadas: [Pessoa!]!
+    itemSegurado: String
+    numVersao: String
+    numSorteCap: String
+    valor_saldo_provisao: Float
+    saldo_liquido: Float
+    saldo_bruto: Float
+    numProposta: String
+}
 
-#type Pessoa {
-#    #_id: ID
-#    id: String
-#    numContrato: String
-#    indContrato: Int
-#    codCpfCnpj: String
-#    tipoRelacionamento: String
-#    sistema: String
-#    email: String
-#    tipoTelefone: String
-#    telefone: String
-#    endereco: String
-#    bairro: String
-#    df: String
-#    cidade: String
-#    cep: String
-#    nomePessoa: String
-#    tipoPessoa: String
-#    indVinculoPrincipal: String
-#}
+type Pessoa {
+    #_id: ID
+    id: String
+    numContrato: String
+    indContrato: Int
+    codCpfCnpj: String
+    tipoRelacionamento: String
+    sistema: String
+    email: String
+    tipoTelefone: String
+    telefone: String
+    endereco: String
+    bairro: String
+    df: String
+    cidade: String
+    cep: String
+    nomePessoa: String
+    tipoPessoa: String
+    indVinculoPrincipal: String
+}
 
 type CanalPagamentoDebito {
     codigo_tipo_pagamento: String,

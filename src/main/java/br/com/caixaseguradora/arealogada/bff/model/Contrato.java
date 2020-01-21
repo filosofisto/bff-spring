@@ -1,5 +1,7 @@
 package br.com.caixaseguradora.arealogada.bff.model;
 
+import java.util.List;
+
 public class Contrato {
 
     //"$id": "789",
@@ -69,7 +71,7 @@ public class Contrato {
     private String endereco;
 
     //"coberturasContratadas": [],
-    //private String[] coberturasContratadas;
+    private List<String> coberturasContratadas;
 
     //"numCertificado": "0",
     private String numCertificado;
@@ -129,7 +131,7 @@ public class Contrato {
     private String tipoContrato;
 
     // pessoasVinculadas
-    private Pessoa[] pessoasVinculadas;
+    private List<Pessoa> pessoasVinculadas;
 
     //"itemSegurado": "CIVIC SEDAN LXS 1.8/1.8 FLEX 16V AUT. 4P HONDA JGT-0",
     private String itemSegurado;
@@ -150,6 +152,7 @@ public class Contrato {
     private Double saldo_bruto;
 
     //"assistenciasContratadas": [],
+    private List<String> assistenciasContratadas;
 
     //"numProposta": "80630330160041"
     private String numProposta;
@@ -474,11 +477,11 @@ public class Contrato {
         this.tipoContrato = tipoContrato;
     }
 
-    public Pessoa[] getPessoasVinculadas() {
+    public List<Pessoa> getPessoasVinculadas() {
         return pessoasVinculadas;
     }
 
-    public void setPessoasVinculadas(Pessoa[] pessoasVinculadas) {
+    public void setPessoasVinculadas(List<Pessoa> pessoasVinculadas) {
         this.pessoasVinculadas = pessoasVinculadas;
     }
 
@@ -536,5 +539,21 @@ public class Contrato {
 
     public void setNumProposta(String numProposta) {
         this.numProposta = numProposta;
+    }
+
+    public List<String> getCoberturasContratadas() {
+        return coberturasContratadas;
+    }
+
+    public void setCoberturasContratadas(List<String> coberturasContratadas) {
+        this.coberturasContratadas = coberturasContratadas;
+    }
+
+    public List<String> getAssistenciasContratadas() {
+        return assistenciasContratadas;
+    }
+
+    public void setAssistenciasContratadas(List<String> assistenciasContratadas) {
+        this.assistenciasContratadas = assistenciasContratadas;
     }
 }

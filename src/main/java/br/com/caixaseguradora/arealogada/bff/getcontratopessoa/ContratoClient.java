@@ -31,7 +31,7 @@ public class ContratoClient extends NetworkClient {
         headers.set("scope", "CORP");
         headers.set("Accept", "application/json");
         headers.set("Content-Type", "application/json; charset=utf-8");
-        final HttpEntity<String> entity = new HttpEntity<String>(headers);
+        final HttpEntity<String> entity = new HttpEntity<>(headers);
 
         ResponseEntity<Contrato[]> response = new RestTemplate().exchange(
                 urlFor(cpf), HttpMethod.GET, entity, Contrato[].class

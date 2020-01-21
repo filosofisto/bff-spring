@@ -21,6 +21,10 @@ public final class SecurityHelper {
             throw new RuntimeException("strange bearer token");
         }
 
+        if (bearerToken.length() < 8) {
+            throw new RuntimeException("bear token size invalid");
+        }
+
         return bearerToken.substring(7);
     }
 }
